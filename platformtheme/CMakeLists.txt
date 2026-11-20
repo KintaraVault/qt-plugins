@@ -72,7 +72,7 @@ target_link_libraries(cutefishplatformtheme PRIVATE
     Qt6::DBus
 )
 
-find_program(QT_PATHS_EXECUTABLE NAMES qtpaths6 REQUIRED)
+find_program(QT_PATHS_EXECUTABLE NAMES qtpaths6 qtpaths PATHS /usr/lib/qt6/bin REQUIRED)
 execute_process(COMMAND "${QT_PATHS_EXECUTABLE}" -query QT_INSTALL_PLUGINS
     OUTPUT_VARIABLE QT_PLUGINS_DIR OUTPUT_STRIP_TRAILING_WHITESPACE)
 if(QT_PLUGINS_DIR)
